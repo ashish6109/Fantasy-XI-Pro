@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy XI Pro - Win More IPL Fantasy Contests</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .glow { box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+        .neon-glow { box-shadow: 0 0 30px rgba(34, 197, 94, 0.7), 0 0 60px rgba(34, 197, 94, 0.3); }
+        .gradient-bg { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0f0f0f 100%); }
+        .gold-glow { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+        .sticky-vip { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; }
+        @media (min-width: 768px) { .sticky-vip { display: none; } }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+  
+      <script>
+          function buyVIP(amount){
+          localStorage.setItem("vip_amount", amount);
+          window.location.href = "checkout.html";
+          } 
+     </script>
+
+    <!-- Custom Payment Link - EDIT THIS -->
+    <script>
+        // ⚠️ IMPORTANT: Replace this URL with your actual payment gateway link
+        const PAYMENT_LINK = 'https://your-payment-gateway-link.com'; // Paste your UPI/Razorpay link here
+    </script>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20 px-4 md:py-32 relative overflow-hidden">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent mb-6 leading-tight">
+                    Win More Fantasy Contests
+                </h1>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8">
+                    This IPL Season
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Get expert fantasy teams, captain & vice-captain picks, and last-minute toss updates for all major fantasy platforms.
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+                    <a href="#pricing" class="inline-block bg-gradient-to-r from-green-400 to-green-600 text-black font-bold py-5 px-12 rounded-full text-xl md:text-2xl glow neon-glow hover:from-green-500 hover:to-green-700 transform hover:scale-105 transition-all duration-300">
+<i class="fas fa-crown mr-2"></i>Unlock VIP Teams
+</a>
+                    <a href="#pricing" class="inline-block border-2 border-yellow-400 text-yellow-400 font-bold py-5 px-12 rounded-full text-xl md:text-2xl hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                        View Today's Free Team
+                    </a>
+                </div>
+                <p class="text-lg md:text-xl text-red-400 font-semibold mt-8 animate-pulse">
+                    🔥 Limited spots available before match toss!
+                </p>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent)]"></div>
+    </section>
+
+    <!-- Sticky Mobile VIP Button -->
+    <div class="sticky-vip md:hidden">
+     <a href="#pricing" class="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl glow neon-glow transform hover:scale-110 transition-all duration-300 flex items-center">
+<i class="fas fa-crown mr-2"></i>Join VIP Now
+</a>
+    </div>
+
+    <!-- Supported Platforms -->
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">Works on All Major Platforms</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6 bg-gray-900 rounded-2xl card-hover">
+                    <i class="fas fa-dream11 text-4xl text-blue-500 mb-4 block mx-auto"></i>
+                    <span class="font-bold text-lg">Dream11</span>
+                </div>
+                <div class="text-center p-6 bg-gray-900 rounded-2xl card-hover">
+                    <i class="fas fa-circle text-4xl text-red-500 mb-4 block mx-auto"></i>
+                    <span class="font-bold text-lg">My11Circle</span>
+                </div>
+                <div class="text-center p-6 bg-gray-900 rounded-2xl card-hover">
+                    <i class="fas fa-eye text-4xl text-purple-500 mb-4 block mx-auto"></i>
+                    <span class="font-bold text-lg">Vision11</span>
+                </div>
+                <div class="text-center p-6 bg-gray-900 rounded-2xl card-hover">
+                    <i class="fas fa-gamepad text-4xl text-green-500 mb-4 block mx-auto"></i>
+                    <span class="font-bold text-lg">Gamezy</span>
+                </div>
+                <div class="text-center p-6 bg-gray-900 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-star text-white text-xl"></i>
+                    </div>
+                    <span class="font-bold text-lg">+ More</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-4 gradient-bg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 text-white">Why Join Our VIP Fantasy Club?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-green-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">2-3 Grand League Teams</h3>
+                    <p class="text-gray-300">Multiple winning combinations for big prizes</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Safe Small League Team</h3>
+                    <p class="text-gray-300">Consistent ranks for steady winnings</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">C & VC Strategy</h3>
+                    <p class="text-gray-300">Perfect captain & vice-captain picks</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Pitch & Match Analysis</h3>
+                    <p class="text-gray-300">Expert insights before every match</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Final Team After Toss</h3>
+                    <p class="text-gray-300">Updated teams post-toss confirmation</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-red-400 rounded-3xl mx-auto mb-6 flex items-center justify-center text-2xl">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Live Updates</h3>
+                    <p class="text-gray-300">Last-minute player news & changes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Pricing -->
+    <section class="py-20 px-4 bg-gray-800" id="pricing">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-4 text-white">Unlock Premium Fantasy Teams</h2>
+            <p class="text-xl text-center text-gray-300 mb-20 max-w-2xl mx-auto">Choose your plan and start winning today</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Daily -->
+                <div class="bg-gradient-to-b from-gray-900 to-gray-800 p-8 rounded-3xl card-hover border-4 border-transparent hover:border-green-500 relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-black px-6 py-2 rounded-full font-bold text-lg">MOST POPULAR</div>
+                    <div class="text-center">
+                        <h3 class="text-3xl font-black mb-4">Daily Pass</h3>
+                        <div class="text-4xl md:text-5xl font-black text-yellow-400 mb-4">₹99</div>
+                        <p class="text-gray-300 mb-8">Access to today's VIP teams</p>
+                        <a href="#" onclick="buyVIP(99)" class="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-2xl glow hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300">
+                            Buy VIP Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Weekly -->
+                <div class="bg-gradient-to-b from-gray-900 to-gray-800 p-8 rounded-3xl card-hover border-4 border-transparent hover:border-green-500">
+                    <div class="text-center">
+                        <h3 class="text-3xl font-black mb-4">Weekly VIP</h3>
+                        <div class="text-4xl md:text-5xl font-black text-yellow-400 mb-4">₹299</div>
+                        <p class="text-gray-300 mb-8">All matches for 7 days</p>
+                        <a href="#" onclick="buyVIP(299)" class="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-2xl glow hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300">
+                            Buy VIP Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Monthly -->
+                <div class="bg-gradient-to-b from-gray-900 to-gray-800 p-8 rounded-3xl card-hover border-4 border-transparent hover:border-green-500">
+                    <div class="text-center">
+                        <h3 class="text-3xl font-black mb-4">Monthly VIP</h3>
+                        <div class="text-4xl md:text-5xl font-black text-yellow-400 mb-4">₹699</div>
+                        <p class="text-gray-300 mb-8">Full VIP access for all matches</p>
+                        <a href="#" onclick="buyVIP(699)" class="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-2xl glow hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300">
+                            Buy VIP Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Banner -->
+    <section class="py-12 bg-gradient-to-r from-red-600 to-red-500 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">⚡ Today's IPL match teams available – Join before toss!</h2>
+            <a href="#pricing" class="inline-block bg-white text-red-600 font-bold py-4 px-12 rounded-full text-xl glow hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                Get VIP Teams Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Winning Proof -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 text-white">Real Winners, Real Results</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-3xl">
+                    <div class="bg-green-500 w-full h-48 rounded-2xl mb-4 flex items-center justify-center text-3xl font-bold text-black">
+                        ₹18,500 WIN
+                    </div>
+                    <p class="text-gray-300">Grand League Rank #1</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-3xl">
+                    <div class="bg-yellow-500 w-full h-48 rounded-2xl mb-4 flex items-center justify-center text-3xl font-bold text-black">
+                        ₹45,000+
+                    </div>
+                    <p class="text-gray-300">Multiple league wins</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-3xl">
+                    <div class="bg-purple-500 w-full h-48 rounded-2xl mb-4 flex items-center justify-center text-3xl font-bold text-black">
+                        150+ RANKS
+                    </div>
+                    <p class="text-gray-300">Consistent small league wins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Testimonials -->
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 text-white">What Our VIP Members Say</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-900 p-8 rounded-3xl text-center card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-500 rounded-full mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-black">RS</div>
+                    <p class="text-xl font-semibold text-yellow-400 mb-4">"I won ₹18,500 using the GL team!"</p>
+                    <p class="text-gray-300">Rohit Sharma Fan</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl text-center card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-black">VK</div>
+                    <p class="text-xl font-semibold text-yellow-400 mb-4">"Best fantasy prediction service I've used."</p>
+                    <p class="text-gray-300">Virat Kohli Fan</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-3xl text-center card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-black">DH</div>
+                    <p class="text-xl font-semibold text-yellow-400 mb-4">"Great teams, I win small leagues consistently."</p>
+                    <p class="text-gray-300">Dhoni Fan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
