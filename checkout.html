@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{font-family:'Poppins',sans-serif}
+</style>
+
+</head>
+
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen text-white">
+
+
+<div class="bg-gray-800 p-10 rounded-2xl w-full max-w-md">
+
+<h2 class="text-3xl font-black mb-8 text-center">
+Checkout
+</h2>
+
+<form id="checkoutForm">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required
+class="w-full mb-4 p-4 rounded-lg text-black"
+/>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required
+class="w-full mb-4 p-4 rounded-lg text-black"
+/>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required
+class="w-full mb-4 p-4 rounded-lg text-black"
+/>
+
+
+<div class="mb-6 text-lg">
+Amount: ₹<span id="amount"></span>
+</div>
+
+
+<button
+type="submit"
+class="w-full bg-green-500 py-4 rounded-lg text-xl font-bold">
+Proceed to Payment
+</button>
+
+</form>
+
+</div>
+
+
+<script>
+
+let amount=localStorage.getItem("vip_amount");
+
+document.getElementById("amount").innerText=amount;
+
+document.getElementById("checkoutForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+
+let paymentURL=`https://creatorfeed.in/dp?product=40308a05-0585-402a-84a8-ddb9b64d29c3&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&amount=${amount}`;
+
+window.location.href=paymentURL;
+
+});
+
+</script>
+
+
+</body>
+</html>
